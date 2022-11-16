@@ -1,16 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel= "stylesheet" href="/main.js">
+    <link rel="stylesheet" href="/main.js">
     <script type="text/javascript" language="javascript" src="./main.js"></script>
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1/css/all.min.css">
     <link rel="icon" href="./assets/img/small_logo.png">
     <title>BOT STORE</title>
 </head>
+
 <body>
     <!-- header -->
     <div id="header">
@@ -54,7 +57,7 @@
             <div class="mid-top">
                 <div class="logo">
                     <a href="./index.php">
-                    <img src="./assets/img/Logo.png" alt="Logo" id="img_logo">
+                        <img src="./assets/img/Logo.png" alt="Logo" id="img_logo">
                     </a>
                 </div>
                 <div class="search">
@@ -94,7 +97,7 @@
                             <li class="menu_left-item">
                                 <div class="menu_left-item-title">
                                     <div class="menu_left-item-title-child">Mô hình phim</div>
-                                    <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i> 
+                                    <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
                                     <ul>
@@ -109,7 +112,7 @@
                             <li class="menu_left-item">
                                 <div class="menu_left-item-title">
                                     <div class="menu_left-item-title-child">Mô hình anime</div>
-                                    <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i> 
+                                    <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
                                     <ul>
@@ -125,7 +128,7 @@
                             <li class="menu_left-item">
                                 <div class="menu_left-item-title">
                                     <div class="menu_left-item-title-child">Mô hình khác</div>
-                                    <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i> 
+                                    <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
                                     <ul>
@@ -165,7 +168,7 @@
         <!-- bot -->
         <div class="header_bot">
             <div class="header_bot-review">
-                <img src="./assets/img/lego1.jpg", alt="" id="img__bgreview">
+                <img src="./assets/img/lego1.jpg" , alt="" id="img__bgreview">
                 <div class="arrow_slide arrow_slide-left">
                     <i class="fa-solid fa-chevron-left icon_arrow-slide" onclick="prev()"></i>
                 </div>
@@ -186,7 +189,7 @@
                 <div class="body_top-title">
                     <div class="body_top-title-left">
                         <i class="fa-solid fa-bolt-lightning icon_top-title"></i>
-                        Ưu đãi 
+                        Ưu đãi
                     </div>
                     <div class="body_top-title-right">
                         <a href="#" class="body_top-title-right-item">Xem tất cả
@@ -203,11 +206,11 @@
                             <div class="ratings_products">
                                 <span>Mô hình Lego Jurassic</span>
                                 <span>
-                                   <i class="fa-solid fa-star icon_star"></i>
-                                   <i class="fa-solid fa-star icon_star"></i>
-                                   <i class="fa-solid fa-star icon_star"></i>
-                                   <i class="fa-solid fa-star icon_star"></i>
-                                   <i class="fa-solid fa-star icon_star"></i>
+                                    <i class="fa-solid fa-star icon_star"></i>
+                                    <i class="fa-solid fa-star icon_star"></i>
+                                    <i class="fa-solid fa-star icon_star"></i>
+                                    <i class="fa-solid fa-star icon_star"></i>
+                                    <i class="fa-solid fa-star icon_star"></i>
                                 </span>
                                 <div>
                                     <span class="info_price">100$</span>
@@ -302,7 +305,7 @@
                     <div class="body_top-title">
                         <div class="body_top-title-left">
                             <i class="fa-solid fa-medal icon_top-title"></i>
-                            Sản phẩm hàng đầu 
+                            Sản phẩm hàng đầu
                         </div>
                         <div class="body_top-title-right">
                             <a href="#" class="body_top-title-right-item">Xem tất cả
@@ -475,14 +478,14 @@
             <!-- end sản phẩm mới -->
         </div>
         <!-- end body top -->
-        <!-- body mid --> 
+        <!-- body mid -->
         <div class="body_mid">
             <div class="body_mid-child">
                 <i class="fa-solid fa-angle-left"></i>
                 <div class="body_mid-describe">
                     <p class="body_mid-describe-title">Lego bức họa Van Gogh</p>
                     <p class="body_mid-describe-item">Giống như nhiều người tiên phong, tác phẩm của van Gogh không được đánh giá đầy đủ trong suốt cuộc đời của ông,
-                     nhưng di sản quan trọng và lâu dài của ông có nghĩa là ông vẫn truyền cảm hứng cho các nghệ sĩ nhiều thế hệ sau này.</p>
+                        nhưng di sản quan trọng và lâu dài của ông có nghĩa là ông vẫn truyền cảm hứng cho các nghệ sĩ nhiều thế hệ sau này.</p>
                     <span class="body_mid-describe-buy"><i class="fa-regular fa-heart"></i></span>
                     <span class="body_mid-describe-buy">Mua với 165$</span>
                 </div>
@@ -511,11 +514,11 @@
                         <div class="ratings_products">
                             <span>Bộ 3 Luffy Sabo Ace</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">190$</span>
@@ -527,7 +530,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/madara1.jpg" alt="" class="img_products">
@@ -536,11 +539,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Madara Susano</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">250$</span>
@@ -552,7 +555,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/hulk.jpg" alt="" class="img_products">
@@ -561,11 +564,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Hulk Buster</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">185$</span>
@@ -577,7 +580,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/itachi2.jpg" alt="" class="img_products">
@@ -586,11 +589,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Itachi</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">142$</span>
@@ -602,7 +605,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/zoro7.png" alt="" class="img_products">
@@ -611,11 +614,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Zoronoa Zoro Wano</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">230$</span>
@@ -627,7 +630,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/sasuke.jpg" alt="" class="img_products">
@@ -636,11 +639,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Sasuke Susano</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">180$</span>
@@ -652,7 +655,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/obito.jpg" alt="" class="img_products">
@@ -661,11 +664,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Obito</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">159$</span>
@@ -677,7 +680,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/zoro6.png" alt="" class="img_products">
@@ -686,11 +689,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Zoronoa Zoro</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">150$</span>
@@ -702,7 +705,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/luffy.png" alt="" class="img_products">
@@ -711,11 +714,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Luffy Gear 4</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">175$</span>
@@ -727,7 +730,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/legothor.png" alt="" class="img_products">
@@ -736,11 +739,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Lego Thor</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">49$</span>
@@ -752,7 +755,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/batman.jpg" alt="" class="img_products">
@@ -761,11 +764,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Batman</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">109$</span>
@@ -777,7 +780,7 @@
                             <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                </div>                    
+                </div>
                 <div class="products products_recommend">
                     <a href="#">
                         <img src="./assets/img/Albed2.jpg" alt="" class="img_products">
@@ -786,11 +789,11 @@
                         <div class="ratings_products">
                             <span>Mô hình Albedo</span>
                             <span>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
-                               <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
+                                <i class="fa-solid fa-star icon_star"></i>
                             </span>
                             <div>
                                 <span class="info_price">75$</span>
@@ -822,7 +825,7 @@
                 <div>
                     <span class="body_info-item-title">Thanh toán an toàn</span>
                     <p class="body_info-item-description">Nếu bạn thanh toán khi nhận hàng sẽ thanh toán tổng giá trị đơn hàng hoặc
-                    phần còn lại (sau khi bạn đã đặt cọc trước) bằng tiền mặt hoặc quẹt thẻ.
+                        phần còn lại (sau khi bạn đã đặt cọc trước) bằng tiền mặt hoặc quẹt thẻ.
                     </p>
                 </div>
             </div>
@@ -831,10 +834,10 @@
                     <i class="fa-solid fa-user-shield icon_info-sp"></i>
                 </div>
                 <div>
-                <span class="body_info-item-title">Sản phẩm uy tín</span>
-                <p class="body_info-item-description">Các sản phẩm tại Bot Store cam kết đều là sản phẩm chính hãng từ các hãng uy tín.
-                    Đảm bảo an toàn chất lượng cho bạn.
-                </p>
+                    <span class="body_info-item-title">Sản phẩm uy tín</span>
+                    <p class="body_info-item-description">Các sản phẩm tại Bot Store cam kết đều là sản phẩm chính hãng từ các hãng uy tín.
+                        Đảm bảo an toàn chất lượng cho bạn.
+                    </p>
                 </div>
             </div>
             <div class="body_info-item">
@@ -957,4 +960,5 @@
     </div>
     <!-- end footer -->
 </body>
+
 </html>
