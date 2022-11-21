@@ -32,15 +32,16 @@
 </head>
 
 <body>
+    <?php include "header.php" ?>
     <div class="page-header clearfix">
-        <h2 class="pull-left">Employees Details</h2>
+        <h2 class="pull-left">Người dùng</h2>
         <a href="create.php" class="btn btn-success pull-right">Thêm người dùng</a>
     </div>
     <?php
         include("dbConnection.php");
         $dbConnection = new dbConnection();
         $conn = $dbConnection->getConnection();
-        $sql = "SELECT * FROM member";
+        $sql = "SELECT * FROM users";
         if ($result = mysqli_query($conn, $sql)) {
             if (mysqli_num_rows($result) > 0) {
                 echo "<table class='table table-bordered table-striped'>";
@@ -49,6 +50,10 @@
                 echo "<th>ID</th>";
                 echo "<th>Name</th>";
                 echo "<th>Password</th>";
+                echo "<th>Full Name</th>";
+                echo "<th>Email</th>";
+                echo "<th>Is_Block</th>";
+                echo "<th>Permision</th>";
                 echo "</tr>";
                 echo "</thead>";
                 echo "<tbody>";
@@ -57,6 +62,10 @@
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['username'] . "</td>";
                     echo "<td>" . $row['password'] . "</td>";
+                    echo "<td>" . $row['fullname'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
+                    echo "<td>" . $row['is_block'] . "</td>";
+                    echo "<td>" . $row['permision'] . "</td>";
                     echo "<td>";
                     echo "<a href='read.php?id=" . $row['id'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                     echo "<a href='update.php?id=" . $row['id'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
@@ -75,6 +84,7 @@
             echo "ERROR: Không thể thực thi $sql. " . mysqli_error($conn);
         }
     ?>
+    <?php include "footer.php" ?>
 </body>
 
 </html>

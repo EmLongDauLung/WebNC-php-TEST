@@ -4,7 +4,7 @@ class dbConnection
     private $servername = "127.0.0.1:3306";
     private $username = "root";
     private $password = "eldl";
-    private $dbname = "users";
+    private $dbname = "botstore";
 
     public function __construct()
     {
