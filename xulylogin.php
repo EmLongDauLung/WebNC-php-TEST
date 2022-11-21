@@ -1,16 +1,16 @@
 <?php
 session_start();
-require_once("./functions.php");
+require_once("functions.php");
 
 $username = getValue("username", "POST", "str", "");
 $password = getValue("password", "POST", "str", "");
 $action = getValue("action", "POST", "str", "");
 
 
-var_dump($_POST);
-var_dump($username);
-var_dump($password);
-var_dump($action);
+// var_dump($_POST);
+// var_dump($username);
+// var_dump($password);
+// var_dump($action);
 
 $errorMsg = "";
 

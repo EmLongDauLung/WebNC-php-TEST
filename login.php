@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("./functions.php");
+require_once("functions.php");
 
 $username = getValue("username", "POST", "str", "");
 $password = getValue("password", "POST", "str", "");
@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($ErrorUname != "") {
         $Message = "Login failed! Errors found";
     } else {
-        include("./dbConnection.php");
+        include("dbConnection.php");
         $dbConnection = new dbConnection();
         $conn = $dbConnection->getConnection();
-        $query = mysqli_query($conn, "select * from users where name='$fusername' && password='$fpassword'");
+        $query = mysqli_query($conn, "select * from member where username='$fusername' && password='$fpassword'");
         $num_rows = mysqli_num_rows($query);
         $row = mysqli_fetch_array($query);
     }
@@ -56,10 +56,10 @@ function check_input($data)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/login.css">
-    <script type="text/javascript" language="javascript" src="../main.js"></script>
-    <link rel="stylesheet" href="../assets/fontawesome-free-6.1.1/css/all.min.css">
-    <link rel="icon" href="../assets/img/small_logo.png">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <script type="text/javascript" language="javascript" src="./main.js"></script>
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1/css/all.min.css">
+    <link rel="icon" href="./assets/img/small_logo.png">
     <title>BOT STORE</title>
 </head>
 <!-- body -->
@@ -67,9 +67,9 @@ function check_input($data)
 <body id="body">
     <div class="body_container">
         <div class="body_left">
-            <a href="../index.php" class="body_left-linkhome">
-                <img src="../assets/img/small_logo1.png" alt="">
-                <img src="../assets/img/Logo.png" alt="Ảnh Logo" class="body_left-imgLogo">
+            <a href="index.php" class="body_left-linkhome">
+                <img src="./assets/img/small_logo1.png" alt="">
+                <img src="./assets/img/Logo.png" alt="Ảnh Logo" class="body_left-imgLogo">
             </a>
         </div>
         <div class="body_right">
@@ -80,12 +80,13 @@ function check_input($data)
                         if ($num_rows > 0) {
                             $_SESSION["logged"] = 1;
                             header("Location: dashboard.php");
+                            // header("Location: index.php");
                         } else {
                             echo ('<span style="color: red;">*Login Fail</span>');
                         }
                     }
                     ?>
-                    <input type="text" name="username" required="required" placeholder="Email hoặc Số Điện Thoại" class="body_right-inputlogin">
+                    <input type="text" name="username" required="required" placeholder="Tên Tài Khoản" class="body_right-inputlogin">
                     <input type="password" name="password" required="required" placeholder="Mật Khẩu" class="body_right-inputlogin">
                     <input type="hidden" id="action" name="action" value="login" />
                     <div class="body_right-login" id="login">
@@ -96,7 +97,7 @@ function check_input($data)
             </div>
             <hr class="body_right-decoration">
             <div>
-                <a href="./register.php" class="body_right-btncreateacc-login">Tạo tài khoản</a>
+                <a href="register.php" class="body_right-btncreateacc-login">Tạo tài khoản</a>
             </div>
         </div>
     </div>

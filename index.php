@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="login-cart">
-                    <a href="./src/login.php" class="login_cart-item-link">
+                    <a href="login.php" class="login_cart-item-link">
                         <div class="login-cart_item">
                             <i class="fa-solid fa-user"></i>
                         </div>
