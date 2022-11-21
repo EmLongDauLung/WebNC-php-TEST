@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/main.js">
     <script type="text/javascript" language="javascript" src="./main.js"></script>
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap-grid.css">
     <link rel="icon" href="./assets/img/small_logo.png">
     <title>BOT STORE</title>
 </head>

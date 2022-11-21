@@ -79,8 +79,8 @@ function check_input($data)
                     if ($action == "login") {
                         if ($num_rows > 0) {
                             $_SESSION["logged"] = 1;
-                            header("Location: dashboard.php");
-                            // header("Location: index.php");
+                            // header("Location: dashboard.php");
+                            header("Location: index.php");
                         } else {
                             echo ('<span style="color: red;">*Login Fail</span>');
                         }
