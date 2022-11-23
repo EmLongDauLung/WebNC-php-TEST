@@ -1,7 +1,7 @@
 <?php
 if (isset($_SESSION['user_id']) == false) {
 	// Nếu người dùng chưa đăng nhập thì chuyển hướng website sang trang đăng nhập
-	header('Location: login.php');
+	header('Location: login2.php');
 }else {
 	if (isset($_SESSION['permision']) == true) {
 		// Ngược lại nếu đã đăng nhập
@@ -10,7 +10,7 @@ if (isset($_SESSION['user_id']) == false) {
 		if ($permission == '0') {
 			// Nếu không phải admin thì xuất thông báo
 			echo "Bạn không đủ quyền truy cập vào trang này<br>";
-			echo "<a href='http://localhost/website/index.php'> Click để về lại trang chủ</a>";
+			echo "<a href='index.php'> Click để về lại trang chủ</a>";
 			exit();
 		}
 	}

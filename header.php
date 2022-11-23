@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="/main.js">
-    <script type="text/javascript" language="javascript" src="./main.js"></script>
+    <script type="text/javascript" language="javascript" src="./assets/js/main.js"></script>
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/css/posts.css">
+    <!-- <script src="https://localhost/Webdemo/assets/ckeditor5-build-decoupled-document/ckeditor.js"></script> -->
+    <script src="./assets/ckeditor/ckeditor.js"></script>
+    <!-- <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap-grid.css"> -->
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.2-dist/js/bootstrap.js">
     <link rel="icon" href="./assets/img/small_logo.png">
     <title>BOT STORE</title>
 </head>
@@ -87,7 +91,7 @@
                     <i class="fa-solid fa-bars icon_list"></i>
                     Danh mục sản phẩm
                     <div class="menu_left-child">
-                        <ul>
+                        <ul class="menu__left-list2">
                             <li class="menu_left-item">
                                 Mô hình xe hơi
                             </li>
@@ -100,7 +104,7 @@
                                     <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
-                                    <ul>
+                                    <ul class="menu__left-list2">
                                         <li class="menu_left-item-child">Marvel</li>
                                         <li class="menu_left-item-child">DC</li>
                                     </ul>
@@ -115,7 +119,7 @@
                                     <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
-                                    <ul>
+                                    <ul class="menu__left-list2">
                                         <li class="menu_left-item-child">Naruto</li>
                                         <li class="menu_left-item-child">One Piece</li>
                                         <li class="menu_left-item-child">Dragon Ball</li>
@@ -131,7 +135,7 @@
                                     <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
-                                    <ul>
+                                    <ul class="menu__left-list2">
                                         <li class="menu_left-item-child">Mô hình cây mini</li>
                                         <li class="menu_left-item-child">Mô hình trang trí</li>
                                         <li class="menu_left-item-child">Mô hình PC</li>
@@ -148,7 +152,7 @@
                         <a class="link_decor_remover hover-link" href="./index.php">Trang chủ</a>
                     </li>
                     <li class="menu_right-item">
-                        <a class="link_decor_remover hover-link" href="#">Blog</a>
+                        <a class="link_decor_remover hover-link" href="./addposts-ck.php">Blog</a>
                     </li>
                     <li class="menu_right-item">
                         <a class="link_decor_remover hover-link" href="#">Thương hiệu</a>
