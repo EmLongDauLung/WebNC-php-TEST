@@ -91,7 +91,7 @@
                     <i class="fa-solid fa-bars icon_list"></i>
                     Danh mục sản phẩm
                     <div class="menu_left-child">
-                        <ul class="menu__left-list2">
+                        <ul class="p-0">
                             <li class="menu_left-item">
                                 Mô hình xe hơi
                             </li>
@@ -104,7 +104,7 @@
                                     <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
-                                    <ul class="menu__left-list2">
+                                    <ul class="p-0">
                                         <li class="menu_left-item-child">Marvel</li>
                                         <li class="menu_left-item-child">DC</li>
                                     </ul>
@@ -119,7 +119,7 @@
                                     <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
-                                    <ul class="menu__left-list2">
+                                    <ul class="p-0">
                                         <li class="menu_left-item-child">Naruto</li>
                                         <li class="menu_left-item-child">One Piece</li>
                                         <li class="menu_left-item-child">Dragon Ball</li>
@@ -135,7 +135,7 @@
                                     <i class="fa-solid fa-angle-right icon_arrow-menulv2"></i>
                                 </div>
                                 <div class="menu_left-item-lv2">
-                                    <ul class="menu__left-list2">
+                                    <ul class="p-0">
                                         <li class="menu_left-item-child">Mô hình cây mini</li>
                                         <li class="menu_left-item-child">Mô hình trang trí</li>
                                         <li class="menu_left-item-child">Mô hình PC</li>

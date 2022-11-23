@@ -31,8 +31,8 @@
                     include("dbConnection.php");
                     $dbConnection = new dbConnection();
                     $conn = $dbConnection->getConnection();
-                    
-                    $sql = "select * from products where type = 'ưu đãi'";
+
+                    $sql = "SELECT * FROM products WHERE type = 'ưu đãi' order by id desc limit 4;";
                     $query = mysqli_query($conn,$sql);
                     if(mysqli_num_rows($query) == 0){
                         echo"Hiện chúng tôi không có ưu đãi cho sản phẩm nào :>>";
@@ -55,7 +55,7 @@
                                         </div>
                                         <div class='add_like_products'>
                                             <i class='fa-regular fa-heart icon_heart'></i>
-                                            <button class='btn_deal-item'><i class='fa-solid fa-plus'></i></button>
+                                            <button class='btn_deal-item'><i class='fa-solid fa-plus icon_addcart'></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -63,31 +63,7 @@
                         }
                     }
                 ?>
-                <!-- <div class="products">
-                    <a href="#">
-                        <img src="./assets/img/lego3.jpg" alt="" class="img_products">
-                    </a>
-                    <div class="describe_products">
-                        <div class="ratings_products">
-                            <span>Mô hình Lego Jurassic</span>
-                            <span>
-                                <i class="fa-solid fa-star icon_star"></i>
-                                <i class="fa-solid fa-star icon_star"></i>
-                                <i class="fa-solid fa-star icon_star"></i>
-                                <i class="fa-solid fa-star icon_star"></i>
-                                <i class="fa-solid fa-star icon_star"></i>
-                            </span>
-                            <div>
-                                <span class="info_price">100$</span>
-                                <span class="oldprice">200$</span>
-                            </div>
-                        </div>
-                        <div class="add_like_products">
-                            <i class="fa-regular fa-heart icon_heart"></i>
-                            <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                </div> -->
+                </div>
             </div>
         <!-- END DEAL -->
         <!-- TOP sản phẩm -->
@@ -105,7 +81,30 @@
                     </div>
                 </div>
                 <div class="body_bot-ratings">
-                    <!-- ============================================ -->
+                    <?php 
+                        $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by id desc limit 4;";
+                        
+                        $query = mysqli_query($conn,$sql);
+                        if(mysqli_num_rows($query) == 0){
+                            echo"Hiện chúng tôi không có sản phẩm nào";
+                        }
+                        else{
+                            while($data = mysqli_fetch_assoc($query)){
+                                echo "
+                                <div class='body_bot-ratings-item'>
+                                    <a href='#'>
+                                        <img src='./assets/img/{$data['image']}' class='img_ratings-item'>
+                                    </a>
+                                    <div class='body_bot-ratings-info'>
+                                        <span class='ratings-info_text'>{$data['title']}</span>
+                                        <span>{$data['star']} <i class='fa-solid fa-star icon_star'></i> |
+                                        <span class='info_price'>{$data['price']}$</span>
+                                    </div>
+                                </div>
+                                ";
+                            }
+                        }
+                    ?>
                 </div>
             </div>
             <div class="body_top-ratings-brands-child">
@@ -121,14 +120,23 @@
                     </div>
                 </div>
                 <div class="body_bot-brands-info">
-                    <!-- <div class="brands-info_item">
-                        <img src="./assets/img/legobg.jpg" class="img_featurebrands">
-                        <span>Lego</span>
-                    </div>
-                    <div class="brands-info_item">
-                        <img src="./assets/img/Avengers.jpg" class="img_featurebrands">
-                        <span>Avengers</span>
-                    </div> -->
+                    <?php 
+                        $sql = "SELECT * FROM trademark order by id asc limit 2;";
+                        $query = mysqli_query($conn,$sql);
+                        if(mysqli_num_rows($query) == 0){
+                            echo"Hiện chúng tôi đã phá sản và không còn nhà tài trợ";
+                        }
+                        else{
+                            while($data = mysqli_fetch_assoc($query)){
+                                echo "
+                                    <div class='brands-info_item'>
+                                        <img src='./assets/img/{$data['image']}' class='img_featurebrands'>
+                                        <span>{$data['title']}</span>
+                                    </div>
+                                ";
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -147,6 +155,28 @@
                 </div>
             </div>
             <div class="body_bot-arrivals-info">
+                <?php 
+                    $sql = "SELECT * FROM products WHERE type = 'sản phẩm mới' order by id desc limit 6;";
+                    $query = mysqli_query($conn,$sql);
+                    if(mysqli_num_rows($query) == 0){
+                        echo"Hiện chúng tôi không có sản phẩm mới";
+                    }
+                    else{
+                        while($data = mysqli_fetch_assoc($query)){
+                            echo "
+                                <div class='arrivals-info_item'>
+                                    <a href='#'>
+                                        <img src='./assets/img/{$data['image']}' class='img_arrivals-item'>
+                                    </a>
+                                    <div class='arrivals-info_text'>
+                                        <span>{$data['title']}</span>
+                                        <span class='info_price'>{$data['price']}$</span>
+                                    </div>
+                                </div>
+                            ";
+                        }
+                    }
+                ?>
                 <!-- <div class="arrivals-info_item">
                     <a href="#">
                         <img src="./assets/img/cap.jpg" class="img_arrivals-item">
@@ -189,31 +219,38 @@
             </div>
         </div>
         <div class="body_bot-recommend">
-            <!-- <div class="products products_recommend">
-                <a href="#">
-                    <img src="./assets/img/luffysaboace.jpg" alt="" class="img_products">
-                </a>
-                <div class="describe_products">
-                    <div class="ratings_products">
-                        <span>Bộ 3 Luffy Sabo Ace</span>
-                        <span>
-                            <i class="fa-solid fa-star icon_star"></i>
-                            <i class="fa-solid fa-star icon_star"></i>
-                            <i class="fa-solid fa-star icon_star"></i>
-                            <i class="fa-solid fa-star icon_star"></i>
-                            <i class="fa-solid fa-star icon_star"></i>
-                        </span>
-                        <div>
-                            <span class="info_price">190$</span>
-                            <span class="oldprice">210$</span>
-                        </div>
-                    </div>
-                    <div class="add_like_products">
-                        <i class="fa-regular fa-heart icon_heart"></i>
-                        <button class="btn_deal-item"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                </div>
-            </div> -->
+            <?php 
+                $sql = "SELECT * FROM products order by id desc limit 12";
+                $query = mysqli_query($conn,$sql);
+                if(mysqli_num_rows($query) == 0){
+                    echo"Hiện chúng tôi không có sản phẩm nào";
+                }
+                else{
+                    while($data = mysqli_fetch_assoc($query)){
+                        echo "
+                            <div class='products products_recommend'>
+                                <a href='#'>
+                                    <img src='./assets/img/{$data['image']}' alt='' class='img_products'>
+                                </a>
+                                <div class='describe_products'>
+                                    <div class='ratings_products'>
+                                        <span>{$data['title']}</span>
+                                        <span>{$data['star']} <i class='fa-solid fa-star icon_star'></i></span>
+                                        <div>
+                                            <span class='info_price'>{$data['price']}$</span>
+                                            <span class='oldprice'>{$data['oldprice']}$</span>
+                                        </div>
+                                    </div>
+                                    <div class='add_like_products'>
+                                        <i class='fa-regular fa-heart icon_heart'></i>
+                                        <button class='btn_deal-item'><i class='fa-solid fa-plus icon_addcart'></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        ";
+                    }
+                }
+            ?>
         </div>
     </div>
     <div class="body_info">
