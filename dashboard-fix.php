@@ -1,3 +1,4 @@
+<?php include "header.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,18 +41,16 @@
         });
     </script>
 </head>
-
 <body>
-    <?php include "header.php" ?>
     <div class="container">
         <div class="page-header">
             <h2 class="pull-left">Người dùng</h2>
             <a href="create.php" class="btn btn-success pull-right">Thêm người dùng</a>
         </div>
         <?php
-            include("dbConnection.php");
-            $dbConnection = new dbConnection();
-            $conn = $dbConnection->getConnection();
+            // include("dbConnection.php");
+            // $dbConnection = new dbConnection();
+            // $conn = $dbConnection->getConnection();
             $sql = "SELECT * FROM users";
             $query = mysqli_query($conn,$sql);
         ?>
@@ -72,11 +71,11 @@
             <?php 
                 while ( $data = mysqli_fetch_array($query) ) {
                     $i = 1;
-                    $id = $data['id'];
+                    $id = $data['user_id'];
             ?>
                 <tr>
                     <!-- <td><?php echo $i; ?></td> -->
-                    <td><?php echo $data['id']; ?></td>
+                    <td><?php echo $data['user_id']; ?></td>
                     <td><?php echo $data['username']; ?></td>
                     <td><?php echo $data['password']; ?></td>
                     <td><?php echo $data['fullname']; ?></td>

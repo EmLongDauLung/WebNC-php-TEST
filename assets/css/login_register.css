@@ -35,7 +35,30 @@
     background-color: white;
     border-radius: 6px;
 }
-
+.btn__admin{
+    width: 100%;
+    height: 35px;
+    position: relative;
+}
+.btn__admin__login{
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px 12px;
+    position:absolute;
+    right: 0;
+    cursor: pointer;
+    background: linear-gradient(to left, #72af5c,
+            #b5e8a2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.btn__admin__login:hover{
+    background: linear-gradient(to right, #72af5c,
+    #72af5c);
+}
 .body_right__back{
     text-align: center;
 }

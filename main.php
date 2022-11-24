@@ -28,11 +28,11 @@
             </div>
             <div class="body_bot-deal-child">
                 <?php 
-                    include("dbConnection.php");
-                    $dbConnection = new dbConnection();
-                    $conn = $dbConnection->getConnection();
+                    // include("dbConnection.php");
+                    // $dbConnection = new dbConnection();
+                    // $conn = $dbConnection->getConnection();
 
-                    $sql = "SELECT * FROM products WHERE type = 'ưu đãi' order by id desc limit 4;";
+                    $sql = "SELECT * FROM products WHERE type = 'ưu đãi' order by product_id desc limit 4;";
                     $query = mysqli_query($conn,$sql);
                     if(mysqli_num_rows($query) == 0){
                         echo"Hiện chúng tôi không có ưu đãi cho sản phẩm nào :>>";
@@ -82,7 +82,7 @@
                 </div>
                 <div class="body_bot-ratings">
                     <?php 
-                        $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by id desc limit 4;";
+                        $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by product_id desc limit 4;";
                         
                         $query = mysqli_query($conn,$sql);
                         if(mysqli_num_rows($query) == 0){
@@ -121,7 +121,7 @@
                 </div>
                 <div class="body_bot-brands-info">
                     <?php 
-                        $sql = "SELECT * FROM trademark order by id asc limit 2;";
+                        $sql = "SELECT * FROM trademark order by trademark_id asc limit 2;";
                         $query = mysqli_query($conn,$sql);
                         if(mysqli_num_rows($query) == 0){
                             echo"Hiện chúng tôi đã phá sản và không còn nhà tài trợ";
@@ -156,7 +156,7 @@
             </div>
             <div class="body_bot-arrivals-info">
                 <?php 
-                    $sql = "SELECT * FROM products WHERE type = 'sản phẩm mới' order by id desc limit 6;";
+                    $sql = "SELECT * FROM products WHERE type = 'sản phẩm mới' order by product_id desc limit 6;";
                     $query = mysqli_query($conn,$sql);
                     if(mysqli_num_rows($query) == 0){
                         echo"Hiện chúng tôi không có sản phẩm mới";
@@ -220,10 +220,10 @@
         </div>
         <div class="body_bot-recommend">
             <?php 
-                $sql = "SELECT * FROM products order by id desc limit 12";
+                $sql = "SELECT * FROM products order by product_id desc limit 12";
                 $query = mysqli_query($conn,$sql);
                 if(mysqli_num_rows($query) == 0){
-                    echo"Hiện chúng tôi không có sản phẩm nào";
+                    echo"Không mua thì đề xuất làm gì. Tự giác bấm Ctrl + W đi";
                 }
                 else{
                     while($data = mysqli_fetch_assoc($query)){

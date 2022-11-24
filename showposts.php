@@ -1,14 +1,14 @@
 <?php
-    include("dbConnection.php");
-    $dbConnection = new dbConnection();
-    $conn = $dbConnection->getConnection();
+    // include("dbConnection.php");
+    // $dbConnection = new dbConnection();
+    // $conn = $dbConnection->getConnection();
     include("header.php");
 	$id = -1;
 	if (isset($_GET["id"])) {
 		$id = intval($_GET['id']);
 	}
 	// Lấy ra nội dung bài viết theo điều kiện id
-	$sql = "select * from posts where id = $id";
+	$sql = "select * from posts where posts_id = $id";
 	// Thực hiện truy vấn data thông qua hàm mysqli_query
 	$query = mysqli_query($conn,$sql);
 ?>
@@ -21,11 +21,12 @@
     <div>
         <?php 
             while ( $data = mysqli_fetch_array($query) ) {
+                echo"<h3>{$data['title']}</h3> </br>
+                <i> Ngày tạo: {$data['createdate']}</i>
+                <p>{$data['content']}</p>
+                ";
+            }
         ?>
-            <h3><?php echo $data['title']; ?></h3></div></ br>
-            <i> Ngày tạo : <?php echo $data['createdate']; ?></i>
-            <p><?php echo $data['content']; ?></p>
-        <?php } ?>
     </div>
 </main>
 <?php include "footer.php" ?>

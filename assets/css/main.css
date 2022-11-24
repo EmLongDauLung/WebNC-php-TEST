@@ -137,8 +137,23 @@ html{
     cursor: pointer;
     border: solid 1px #72af5c;
 }
-.login-cart{
+.login{
+    width: fit-content;
+}
+.login__cart__logout{
     display: flex;
+}
+.login__cart__logout-item{
+    margin: 0 2px;
+}
+.login_cart-item-link:hover{
+    color: white;
+}
+.login__usersname{
+    font-size: 14px;
+}
+.login_cart-item-link{
+    color: rgb(0, 0, 0);
 }
 .login-cart_item{
     width: 44px;
@@ -147,14 +162,11 @@ html{
     padding: 10px 10px 10px 15px;
     border-radius: 50%;
     box-sizing: border-box;
-    margin-left: 10px;
-}
-.login_cart-item-link{
-    text-decoration: none;
-    color: black;
+    margin: auto;
 }
 .login-cart_item:hover {
-    background-color: #72af5c63;
+    background-color: #397224;
+    color: white;
 }
 /*  css header mid BOT */
 .mid-bot{
@@ -388,6 +400,9 @@ html{
 .body_top-title-right-item{
     text-decoration: none;
     color: rgb(70, 70, 70);
+}
+.body_top-title-right-item:hover{
+    color:#397224;
 }
 .body_bot-deal-child{
     width: 100%;

@@ -23,9 +23,6 @@
         </div>
         <div class="body_right">
             <div>
-                <div class="btn__admin">
-                    <a href="adlogin.php" class="btn__admin__login">Admin</a>
-                </div>
                 <form method="POST" action="login.php">
                     <div class="form__input">
                         <input type="text" name="username" placeholder="Tên Tài Khoản" class="body_right-inputlogin">
@@ -36,7 +33,7 @@
                         <span class="bar"></span>
                     </div>
                     <div class="body_right-login">
-                        <button type="submit" class="form__button" name="dangnhap">Đăng Nhập</button>
+                        <button type="submit" class="form__button" name="admin_login">Đăng Nhập</button>
                         <a href="#" class="body_right-forgotpass">Forgotten Password ?</a>
                     </div>
                     <?php require("xulylogin.php") ?>
@@ -44,7 +41,7 @@
             </div>
             <hr class="body_right-decoration">
             <div class="body_right__back">
-                <a href="register.php" class="body_right-btncreateacc-login">Tạo tài khoản</a>
+                <a href="login.php" class="body_right-btncreateacc-login">Quay lại</a>
             </div>
         </div>
     </div>

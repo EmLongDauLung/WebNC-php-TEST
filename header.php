@@ -70,17 +70,55 @@
                         <i class="fa-solid fa-magnifying-glass icon-search"></i>
                     </div>
                 </div>
-                <div class="login-cart">
-                    <a href="login.php" class="login_cart-item-link">
-                        <div class="login-cart_item">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="login_cart-item-link">
-                        <div class="login-cart_item">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                        </div>
-                    </a>
+                <div class="login__cart__logout">
+                    <div class="login__cart__logout-item login">
+                        <?php
+                            session_start();
+                            include("dbConnection.php");
+                            $dbConnection = new dbConnection();
+                            $conn = $dbConnection->getConnection();
+                            if($_SESSION['user_id'] == NULL){
+                                echo"
+                                    <a href='login.php' class='login_cart-item-link'>
+                                        <div class='login-cart_item'>
+                                            <i class='fa-solid fa-user'></i>
+                                        </div>
+                                    </a>
+                                ";
+                            }
+                            else{
+                                echo"
+                                    <a href='profile.php' class='login_cart-item-link'>
+                                        <div class='login-cart_item'>
+                                            <i class='fa-solid fa-user'></i>
+                                        </div>
+                                    </a>
+                                ";
+                                echo "<span class='login__usersname'>{$_SESSION['fullname']}</span>";
+                            }
+                        ?>
+                    </div>
+                    <div class="login__cart__logout-item cart">
+                        <a href="#" class="login_cart-item-link">
+                            <div class="login-cart_item">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <?php
+                        if($_SESSION['user_id'] != NULL)
+                        {
+                            echo"
+                                <div class='login__cart__logout-item logout'>
+                                    <a href='logout.php' class='login_cart-item-link'>
+                                        <div class='login-cart_item'>
+                                            <i class='fa-solid fa-right-from-bracket'></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            ";
+                        }
+                    ?>
                 </div>
             </div>
             <!-- end header mid top -->
@@ -152,7 +190,7 @@
                         <a class="link_decor_remover hover-link" href="./index.php">Trang chủ</a>
                     </li>
                     <li class="menu_right-item">
-                        <a class="link_decor_remover hover-link" href="./addposts-ck.php">Blog</a>
+                        <a class="link_decor_remover hover-link" href="./posts.php">Blog</a>
                     </li>
                     <li class="menu_right-item">
                         <a class="link_decor_remover hover-link" href="#">Thương hiệu</a>

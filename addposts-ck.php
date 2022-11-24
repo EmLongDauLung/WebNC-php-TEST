@@ -1,5 +1,5 @@
 <?php
-	session_start(); 
+	// session_start(); 
 	include "./header.php";
 	include "./permission.php";
 
@@ -17,7 +17,7 @@
 		$sql = "INSERT INTO posts(title, content, user_id, is_public, createdate, updatedate ) VALUES ( '$title', '$content', '$user_id', '$is_public', now(), now())";
 		// thực thi câu $sql với biến conn lấy từ file connection.php
 		// mysqli_query($conn,$sql);
-		$conn = mysqli_connect('127.0.0.1:3306', 'root', 'eldl', 'botstore');
+		// $conn = mysqli_connect('127.0.0.1:3306', 'root', 'eldl', 'botstore');
 		mysqli_query($conn,$sql);
 		echo '<script language="javascript">alert("Đăng bài thành công!"); window.location="addposts-ck.php";</script>';
 	}
