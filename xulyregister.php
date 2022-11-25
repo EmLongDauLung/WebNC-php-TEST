@@ -1,23 +1,26 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 // Kết nối cơ sở dữ liệu
-$conn = mysqli_connect('127.0.0.1:3306', 'root', 'eldl', 'botstore_test') or die ('Lỗi kết nối'); mysqli_set_charset($conn, "utf8");
+include("dbConnection.php");
+$dbConnection = new dbConnection();
+$conn = $dbConnection->getConnection();
+// $conn = mysqli_connect('127.0.0.1:3306', 'root', 'eldl', 'botstore_test') or die ('Lỗi kết nối'); mysqli_set_charset($conn, "utf8");
 
 // Dùng isset để kiểm tra Form
-if(isset($_POST['dangky'])){
+if (isset($_POST['dangky'])) {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     $name = $_POST["name"];
     $email = $_POST["email"];
 
     if (empty($username)) {
-        array_push($errors, "Username is required"); 
+        array_push($errors, "Username is required");
     }
     if (empty($password)) {
-        array_push($errors, "Two password do not match"); 
+        array_push($errors, "Two password do not match");
     }
     if (empty($email)) {
-        array_push($errors, "Two email do not match"); 
+        array_push($errors, "Two email do not match");
     }
 
     // Kiểm tra username hoặc email có bị trùng hay không
@@ -27,25 +30,21 @@ if(isset($_POST['dangky'])){
     $result = mysqli_query($conn, $sql);
 
     // Nếu kết quả trả về lớn hơn 1 thì nghĩa là username hoặc email đã tồn tại trong CSDL
-    if (mysqli_num_rows($result) > 0)
-    {
+    if (mysqli_num_rows($result) > 0) {
         echo '<script language="javascript">alert("Bị trùng tên hoặc chưa nhập tên!"); window.location="register.php";</script>';
         // Dừng chương trình
-        die ();
-    }
-    else {
+        die();
+    } else {
         $sql = "INSERT INTO users (username, password, fullname, email) VALUES ('$username','$password','$name','$email')";
         echo '<script language="javascript">alert("Đăng ký thành công!"); window.location="register.php";</script>';
 
-        if (mysqli_query($conn, $sql)){
-            echo "Tên đăng nhập: ".$_POST['username']."<br/>";
-            echo "Mật khẩu: " .$_POST['password']."<br/>";
-            echo "Họ tên: " .$_POST['name']."<br/>";
-            echo "Email: " .$_POST['email']."<br/>";
-        }
-        else {
+        if (mysqli_query($conn, $sql)) {
+            echo "Tên đăng nhập: " . $_POST['username'] . "<br/>";
+            echo "Mật khẩu: " . $_POST['password'] . "<br/>";
+            echo "Họ tên: " . $_POST['name'] . "<br/>";
+            echo "Email: " . $_POST['email'] . "<br/>";
+        } else {
             echo '<script language="javascript">alert("Có lỗi trong quá trình xử lý"); window.location="register.php";</script>';
         }
     }
 }
-?>
