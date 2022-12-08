@@ -6,6 +6,11 @@ class dbConnection
     private $password = "eldl";
     private $dbname = "botstore_test";
 
+    // private $servername = "103.200.23.188";
+    // private $username = "botstore";
+    // private $password = "[0R8sdG8Zj0X!u";
+    // private $dbname = "botstore_shop";
+
     public function __construct()
     {
     }

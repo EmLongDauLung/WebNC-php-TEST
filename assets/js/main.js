@@ -26,11 +26,11 @@ function prev()
 setInterval(next,3000);
 // Hiệu ứng chọn ảnh nhỏ mở ra ảnh lớn trong phần sản phẩm-products
 var img_products=[
-    "../assets/img/Uchiha Madara (2).jpg",
-    "../assets/img/Uchiha Madara (1).jpg",
-    "../assets/img/Uchiha Madara (3).jpg",
-    "../assets/img/Uchiha Madara (4).jpg",
-    "../assets/img/Uchiha Madara (5).jpg",
+    "./assets/img/Uchiha Madara (2).jpg",
+    "./assets/img/Uchiha Madara (1).jpg",
+    "./assets/img/Uchiha Madara (3).jpg",
+    "./assets/img/Uchiha Madara (4).jpg",
+    "./assets/img/Uchiha Madara (5).jpg",
 ]
 
 var dem = 0;

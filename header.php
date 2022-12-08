@@ -9,6 +9,8 @@
     <script type="text/javascript" language="javascript" src="./assets/js/main.js"></script>
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/posts.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="./assets/css/order_detail.css">
     <script src="./assets/ckeditor/ckeditor.js"></script>
     <!-- <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap-grid.css"> -->
     <link rel="stylesheet" href="./assets/bootstrap-5.2.2-dist/css/bootstrap.css">
@@ -102,7 +104,7 @@
                         ?>
                     </div>
                     <div class="login__cart__logout-item cart">
-                        <a href="#" class="login_cart-item-link">
+                        <a href="cart.php" class="login_cart-item-link">
                             <div class="login-cart_item">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
@@ -196,7 +198,7 @@
                         <a class="link_decor_remover hover-link" href="./posts.php">Blog</a>
                     </li>
                     <li class="menu_right-item">
-                        <a class="link_decor_remover hover-link" href="#">Thương hiệu</a>
+                        <a class="link_decor_remover hover-link" href="#">Cửa hàng</a>
                     </li>
                     <li class="menu_right-item">
                         <a class="link_decor_remover hover-link" href="#">Đơn hàng</a>

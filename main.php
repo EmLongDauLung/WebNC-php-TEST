@@ -41,7 +41,7 @@
                         while($data = mysqli_fetch_assoc($query)){
                             echo "
                                 <div class='products'>
-                                    <a href='#'>
+                                    <a href='order_detail.php?id={$data['product_id']}'>
                                         <img src='./assets/img/{$data['image']}' alt='' class='img_products'>
                                     </a>
                                     <div class='describe_products'>
@@ -229,7 +229,7 @@
                     while($data = mysqli_fetch_assoc($query)){
                         echo "
                             <div class='products products_recommend'>
-                                <a href='#'>
+                                <a href='order_detail.php?id={$data['product_id']}'>
                                     <img src='./assets/img/{$data['image']}' alt='' class='img_products'>
                                 </a>
                                 <div class='describe_products'>
