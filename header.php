@@ -78,29 +78,28 @@
                 <div class="login__cart__logout">
                     <div class="login__cart__logout-item login">
                         <?php
-                            session_start();
-                            include("dbConnection.php");
-                            $dbConnection = new dbConnection();
-                            $conn = $dbConnection->getConnection();
-                            if($_SESSION['user_id'] == NULL){
-                                echo"
+                        session_start();
+                        include("dbConnection.php");
+                        $dbConnection = new dbConnection();
+                        $conn = $dbConnection->getConnection();
+                        if ($_SESSION['user_id'] == NULL) {
+                            echo "
                                     <a href='login.php' class='login_cart-item-link'>
                                         <div class='login-cart_item'>
                                             <i class='fa-solid fa-user'></i>
                                         </div>
                                     </a>
                                 ";
-                            }
-                            else{
-                                echo"
+                        } else {
+                            echo "
                                     <a href='profile.php' class='login_cart-item-link'>
                                         <div class='login-cart_item'>
                                             <i class='fa-solid fa-user'></i>
                                         </div>
                                     </a>
                                 ";
-                                echo "<span class='login__usersname'>{$_SESSION['fullname']}</span>";
-                            }
+                            echo "<span class='login__usersname'>{$_SESSION['fullname']}</span>";
+                        }
                         ?>
                     </div>
                     <div class="login__cart__logout-item cart">
@@ -111,9 +110,8 @@
                         </a>
                     </div>
                     <?php
-                        if($_SESSION['user_id'] != NULL)
-                        {
-                            echo"
+                    if ($_SESSION['user_id'] != NULL) {
+                        echo "
                                 <div class='login__cart__logout-item logout'>
                                     <a href='logout.php' class='login_cart-item-link'>
                                         <div class='login-cart_item'>
@@ -122,7 +120,7 @@
                                     </a>
                                 </div>
                             ";
-                        }
+                    }
                     ?>
                 </div>
             </div>
@@ -198,7 +196,7 @@
                         <a class="link_decor_remover hover-link" href="./posts.php">Blog</a>
                     </li>
                     <li class="menu_right-item">
-                        <a class="link_decor_remover hover-link" href="#">Cửa hàng</a>
+                        <a class="link_decor_remover hover-link" href="./addProducts.php">Cửa hàng</a>
                     </li>
                     <li class="menu_right-item">
                         <a class="link_decor_remover hover-link" href="#">Đơn hàng</a>
@@ -212,19 +210,6 @@
             <!-- end header mid bot -->
         </div>
         <!-- end mid -->
-        <!-- bot -->
-        <!-- <div class="header_bot">
-            <div class="header_bot-review">
-                <img src="./assets/img/lego1.jpg" , alt="" id="img__bgreview">
-                <div class="arrow_slide arrow_slide-left">
-                    <i class="fa-solid fa-chevron-left icon_arrow-slide" onclick="prev()"></i>
-                </div>
-                <div class="arrow_slide arrow_slide-right">
-                    <i class="fa-solid fa-chevron-right icon_arrow-slide" onclick="next()"></i>
-                </div>
-            </div>
-        </div> -->
-        <!-- end bot -->
     </div>
     <!-- end header -->
 </body>
