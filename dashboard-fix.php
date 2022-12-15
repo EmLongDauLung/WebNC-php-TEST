@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"> -->
 
     <style type="text/css">
-        .btn{
+        .btn {
             margin: 0px 0 16px 0px;
         }
-        .icon_option{
+
+        .icon_option {
             color: #72af5c;
             font-size: 18px;
         }
-        .icon_option:hover{
+
+        .icon_option:hover {
             color: #397224;
         }
 
@@ -41,6 +43,7 @@
         });
     </script>
 </head>
+
 <body>
     <div class="container">
         <div class="page-header">
@@ -48,11 +51,11 @@
             <a href="create.php" class="btn btn-success pull-right">Thêm người dùng</a>
         </div>
         <?php
-            // include("dbConnection.php");
-            // $dbConnection = new dbConnection();
-            // $conn = $dbConnection->getConnection();
-            $sql = "SELECT * FROM users";
-            $query = mysqli_query($conn,$sql);
+        // include("dbConnection.php");
+        // $dbConnection = new dbConnection();
+        // $conn = $dbConnection->getConnection();
+        $sql = "SELECT * FROM users";
+        $query = mysqli_query($conn, $sql);
         ?>
         <table class="table table-bordered table-striped">
             <thead>
@@ -68,29 +71,29 @@
                 <tr>
             </thead>
             <tbody>
-            <?php 
-                while ( $data = mysqli_fetch_array($query) ) {
+                <?php
+                while ($data = mysqli_fetch_array($query)) {
                     $i = 1;
                     $id = $data['user_id'];
-            ?>
-                <tr>
-                    <!-- <td><?php echo $i; ?></td> -->
-                    <td><?php echo $data['user_id']; ?></td>
-                    <td><?php echo $data['username']; ?></td>
-                    <td><?php echo $data['password']; ?></td>
-                    <td><?php echo $data['fullname']; ?></td>
-                    <td><?php echo $data['email']; ?></td>
-                    <td><?php echo ($data['is_block'] == 1) ? "Bị khóa" : "Không bị khóa"; ?></td>
-                    <td><?php echo ($data['permision'] == 0) ? "Thành viên thường" : "Admin"; ?></td>
-                    <td>
-                        <a href="chinh-sua-thanh-vien.php?id=<?php echo $id;?>"><i class='fa-solid fa-wrench icon_option'></i></a>
-                        <a href="quan-ly-thanh-vien.php?id_delete=<?php echo $id;?>"><i class='fa-solid fa-trash icon_option'></i></a>
-                    </td>
-                </tr>
-            <?php 
+                ?>
+                    <tr>
+                        <!-- <td><?php echo $i; ?></td> -->
+                        <td><?php echo $data['user_id']; ?></td>
+                        <td><?php echo $data['username']; ?></td>
+                        <td><?php echo $data['password']; ?></td>
+                        <td><?php echo $data['fullname']; ?></td>
+                        <td><?php echo $data['email']; ?></td>
+                        <td><?php echo ($data['is_block'] == 1) ? "Bị khóa" : "Không bị khóa"; ?></td>
+                        <td><?php echo ($data['permision'] == 0) ? "Thành viên thường" : "Admin"; ?></td>
+                        <td>
+                            <a href="chinh-sua-thanh-vien.php?id=<?php echo $id; ?>"><i class='fa-solid fa-wrench icon_option'></i></a>
+                            <a href="quan-ly-thanh-vien.php?id_delete=<?php echo $id; ?>"><i class='fa-solid fa-trash icon_option'></i></a>
+                        </td>
+                    </tr>
+                <?php
                     $i++;
                 }
-            ?>
+                ?>
             </tbody>
         </table>
     </div>

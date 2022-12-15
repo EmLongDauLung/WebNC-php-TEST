@@ -3,10 +3,10 @@ class dbConnection
 {
     private $servername = "127.0.0.1:3306";
     private $username = "root";
-    private $password = "eldl";
+    private $password = "1024";
     private $dbname = "botstore_test";
 
-    // private $servername = "103.200.23.188";
+    // private $servername = "host188.vietnix.vn";
     // private $username = "botstore";
     // private $password = "[0R8sdG8Zj0X!u";
     // private $dbname = "botstore_shop";
