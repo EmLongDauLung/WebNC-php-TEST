@@ -26,7 +26,9 @@
 <body>
     <?php
     session_start();
-    require_once('dbConnection.php');
+    include("dbConnection.php");
+    $dbConnection = new dbConnection();
+    $conn = $dbConnection->getConnection();
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     /*
      * To change this license header, choose License Headers in Project Properties.
@@ -37,7 +39,7 @@
     $vnp_TmnCode = "WAVHY2N6"; //Website ID in VNPAY System
     $vnp_HashSecret = "RDDUIQQZHQNCVPGLVWNAQLEVDHHLGUAC"; //Secret key
     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    $vnp_Returnurl = "http://localhost/XAMPP/htdocs/STUDYDOC/WebNC-php-TEST/vnpay_return.php";
+    $vnp_Returnurl = "http://localhost/STUDYDOC/WebNC-php-TEST/vnpay_return.php";
     $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
     //Config input format
     //Expire
@@ -77,7 +79,7 @@
         $vnp_TransactionStatus = $_GET['vnp_TransactionStatus'];
         $code_cart = $_SESSION['code_cart'];
         $sql = "INSERT INTO vn_pay(code_cart, vnp_amount, vnp_bankcode, vnp_banktranno, vnp_cardtype, vnp_orderinfo, vnp_paydate, vnp_tmncode, vnp_transactionno) VALUES ('$code_cart','$vnp_Amount','$vnp_BankCode','$vnp_BankTranNo','$vnp_CardType','$vnp_OrderInfo','$vnp_PayDate','$vnp_TransactionNo','$vnp_TransactionStatus')";
-        $result = mysqli_query($connect, $sql);
+        $result = mysqli_query($conn, $sql);
     }
     ?>
     <!--Begin display -->
@@ -133,6 +135,9 @@
         <p>
             &nbsp;
         </p>
+        <?php
+        unset($_SESSION['cart']);
+        ?>
         <a href="index.php"><button style="margin-bottom: 30px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
     </div>
 

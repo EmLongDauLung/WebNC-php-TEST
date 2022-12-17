@@ -45,11 +45,11 @@
             <div class="footer_contact-title">Về chúng tôi</div>
             <!-- about us link -->
             <div class="footer_contact-about-link">
-                <a class="about-link" href="#">Careers</a>
-                <a class="about-link" href="#">Của hàng của chúng tôi</a>
-                <a class="about-link" href="#">Chính sách giao hàng</a>
-                <a class="about-link" href="#">Điều khoản dịch vụ</a>
-                <a class="about-link" href="#">Chính sách quyền riêng tư</a>
+                <a class="about-link link-light" href="#">Careers</a>
+                <a class="about-link link-light" href="#">Của hàng của chúng tôi</a>
+                <a class="about-link link-light" href="#">Chính sách giao hàng</a>
+                <a class="about-link link-light" href="#">Điều khoản dịch vụ</a>
+                <a class="about-link link-light" href="#">Chính sách quyền riêng tư</a>
             </div>
         </div>
         <!-- dịch vụ chăm sóc khách hàng -->
@@ -58,11 +58,11 @@
             <div class="footer_contact-title">Hỗ trợ khách hàng</div>
             <!-- customer care link -->
             <div class="footer_contact-about-link">
-                <a class="about-link" href="#">Trung tâm hỗ trợ</a>
-                <a class="about-link" href="#">Cách để mua hàng</a>
-                <a class="about-link" href="#">Truy cứu đơn hàng</a>
-                <a class="about-link" href="#">Hợp tác</a>
-                <a class="about-link" href="#">Hoàn trả và hoàn tiền</a>
+                <a class="about-link link-light" href="#">Trung tâm hỗ trợ</a>
+                <a class="about-link link-light" href="#">Cách để mua hàng</a>
+                <a class="about-link link-light" href="#">Truy cứu đơn hàng</a>
+                <a class="about-link link-light" href="#">Hợp tác</a>
+                <a class="about-link link-light" href="#">Hoàn trả và hoàn tiền</a>
             </div>
         </div>
         <!-- liên hệ -->

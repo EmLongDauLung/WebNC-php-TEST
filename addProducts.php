@@ -19,15 +19,14 @@ $conn = $dbConnection->getConnection();
 <body>
     <style>
         .navlinks:hover {
-            /* background-color: whitesmoke; */
-            font-size: 20px;
-            border-radius: 10;
+            background-color: whitesmoke;
+            color: black !important;
         }
     </style>
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid ">
-            <a class="navbar-brand text-white" href="#">Navbar</a>
+            <a class="navbar-brand text-white" href="#">Admin</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,7 +39,10 @@ $conn = $dbConnection->getConnection();
                         <a class="nav-link text-white navlinks" href="#">Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white navlinks" href="#">Product</a>
+                        <a class="nav-link text-white navlinks" href="addProducts.php">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white navlinks" href="./admin/user/dashboard-fix.php">User</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white navlinks" href="index.php">Return to shop</a>

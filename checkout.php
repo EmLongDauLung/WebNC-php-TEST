@@ -1,10 +1,14 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKINLELE.COM</title>
+    <title>BOT STORE</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
@@ -22,28 +26,30 @@
         direction: none;
     }
 </style>
+
 <body>
-   
-    <div class="container" style="align-items: center;justify-content: center; background-color: #f6f7fb;border-radius: 10px;">
-        <h3 style="margin-top: 50px;padding: 20px;">NHẬP THÔNG TIN THANH TOÁN</h3>
-        <div>
+
+    <div class="container w-50 mt-5" style="align-items: center;justify-content: center; background-color: #f6f7fb;border-radius: 10px;">
+        <img src="assets/img/VNPAY.webp" alt="vnpay" class="w-25 h-25 mt-5 ml-5">
+        <!-- <h3 style="margin-top: 50px;padding: 20px;">NHẬP THÔNG TIN THANH TOÁN VNPAY</h3> -->
+        <div class="ml-5">
             <form style="margin-top: 40px;" method="POST" action="process_checkout.php">
                 <div class="form-group">
-                    <label style="font-size: 18px;font-family: 'Times New Roman', Times, serif;">HỌ VÀ TÊN NGƯỜI NHẬN</label>
-                    <input style="font-size: 14px;width: 60%;" type="text" class="form-control" placeholder="Nhập họ tên" name="name_receiver">
+                    <label style="font-size: 18px">HỌ VÀ TÊN</label>
+                    <input style="font-size: 14px;" type="text" class="form-control w-75" placeholder="Nhập họ tên" name="name_receiver">
                 </div>
                 <div class="form-group">
-                    <label style="font-size: 18px;font-family: 'Times New Roman', Times, serif;">SỐ ĐIỆN THOẠI</label>
-                    <input style="font-size: 14px;width: 60%;" type="text" class="form-control" name="phone_number_receiver" placeholder="Nhập số điện thoại">
+                    <label style="font-size: 18px">SỐ ĐIỆN THOẠI</label>
+                    <input style="font-size: 14px;" type="text" class="form-control w-75    " name="phone_number_receiver" placeholder="Nhập số điện thoại">
                 </div>
 
                 <div class="form-group">
-                    <label style="font-size: 18px;font-family: 'Times New Roman', Times, serif;">ĐỊA CHỈ NHẬN HÀNG</label>
-                    <input style="font-size: 14px;width: 60%;" type="text" class="form-control" placeholder="Nhập địa chỉ" name="address_receiver">
+                    <label style="font-size: 18px">ĐỊA CHỈ NHẬN HÀNG</label>
+                    <input style="font-size: 14px;" type="text" class="form-control w-75" placeholder="Nhập địa chỉ" name="address_receiver">
                 </div>
 
                 <div class="form-group" style="width: 300px;">
-                    <label style="font-size: 18px;font-family: 'Times New Roman', Times, serif;">NGÂN HÀNG</label>
+                    <label style="font-size: 18px">NGÂN HÀNG</label>
                     <select name="bank_code" id="bank_code" class="form-control">
                         <option value="ádas">Không chọn</option>
                         <option value="NCB"> Ngan hang NCB</option>
@@ -72,14 +78,18 @@
                 </div>
                 <div class="form-group">
                     <label style="font-size: 18px;font-family: 'Times New Roman', Times, serif;">TỔNG TIỀN</label>
-                    <div></div>
+                    <div>
+                        <?php
+                        echo $_SESSION['total_money']
+                        ?>
+                    </div>
                 </div>
                 <button class="btn btn-success" name="redirect" id="redirect" style="margin-bottom: 10px;">THANH TOÁN</button>
             </form>
-            <a  href="view_cart.php"><button style="margin-top: -86px;margin-left: 145px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
+            <a href="cart.php"><button style="margin-top: -86px;margin-left: 145px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
         </div>
     </div>
-    
+
 </body>
 
 </html>
