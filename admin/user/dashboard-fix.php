@@ -1,7 +1,7 @@
 <?php
-    include("../../dbConnection.php");
-    $dbConnection = new dbConnection();
-    $conn = $dbConnection->getConnection();
+include("../../dbConnection.php");
+$dbConnection = new dbConnection();
+$conn = $dbConnection->getConnection();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +66,7 @@
                         <a class="nav-link text-white navlinks" href="#">Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white navlinks" href="#">Product</a>
+                        <a class="nav-link text-white navlinks" href="../../addProducts.php">Product</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white navlinks" href="dashboard-fix.php">User</a>
