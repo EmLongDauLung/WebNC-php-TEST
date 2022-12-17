@@ -7,6 +7,54 @@ $dbConnection = new dbConnection();
 $conn = $dbConnection->getConnection();
 
 ?>
+<<<<<<< HEAD:admin/product/addProducts.php
+=======
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADMIN PAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        .navlinks:hover {
+            background-color: whitesmoke;
+            color: black !important;
+        }
+    </style>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid ">
+            <a class="navbar-brand text-white" href="#">Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white navlinks" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white navlinks" href="#">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white navlinks" href="addProducts.php">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white navlinks" href="./admin/user/dashboard-fix.php">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white navlinks" href="index.php">Return to shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+>>>>>>> 962bdb6fc5ae9c4927ec254d3cbe1a7797a0516c:addProducts.php
     <!-- BODY -->
     <div>
         <!-- ADD form -->
