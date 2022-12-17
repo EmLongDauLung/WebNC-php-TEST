@@ -21,14 +21,6 @@ if (isset($_POST['start']) && isset($_POST['end'])) {
 } else {
     $sql1 = "select * from products limit $so_san_pham_mot_trang offset $bo_qua";
 }
-// if (isset($_POST['start']) && isset($_POST['end'])) {
-//     $start = $_POST['start'];
-//     $end = $_POST['end'];
-//     $sql = "select * from san_pham where danh_muc=N'Chăm Sóc Da' and gia >=$start and gia<=$end ";
-// } else {
-//     $sql = "select * from san_pham where danh_muc=N'Chăm Sóc Da' limit $so_san_pham_mot_trang offset $bo_qua";
-//     // $result = mysqli_query($connect, $sql);
-// }
 $result = mysqli_query($conn, $sql1);
 //
 ?>
@@ -53,37 +45,3 @@ $result = mysqli_query($conn, $sql1);
         </div>
     </div>
 <?php endforeach ?>
-
-
-
-<?php
-// $sql = "SELECT * FROM products order by product_id desc limit 12";
-// $query = mysqli_query($conn, $sql);
-// if (mysqli_num_rows($query) == 0) {
-//     echo "Không co san pham";
-// } else {
-//     while ($data = mysqli_fetch_assoc($query)) {
-//         echo "
-//         <div class='products products_recommend col mx-4 mb-4'>
-//         <a href='order_detail.php?id={$data['product_id']}'>
-//         <img src='./assets/img/{$data['image']}' alt='' class='img_products'>
-//         </a>
-//         <div class='describe_products'>
-//         <div class='ratings_products'>
-//         <span>{$data['title']}</span>
-//         <span>{$data['star']} <i class='fa-solid fa-star icon_star'></i></span>
-//         <div>
-//         <span class='info_price'>{$data['price']}$</span>
-//         <span class='oldprice'>{$data['oldprice']}$</span>
-//         </div>
-//         </div>
-//         <div class='add_like_products'>
-//         <i class='fa-regular fa-heart icon_heart'></i>
-//         <button class='btn_deal-item'><i class='fa-solid fa-plus icon_addcart'></i></button>
-//         </div>
-//         </div>
-//         </div>
-//         ";
-//     }
-// }
-?>

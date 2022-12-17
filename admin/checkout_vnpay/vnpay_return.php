@@ -26,7 +26,7 @@
 <body>
     <?php
     session_start();
-    include("dbConnection.php");
+    include("../../dbConnection.php");
     $dbConnection = new dbConnection();
     $conn = $dbConnection->getConnection();
     date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -39,7 +39,8 @@
     $vnp_TmnCode = "WAVHY2N6"; //Website ID in VNPAY System
     $vnp_HashSecret = "RDDUIQQZHQNCVPGLVWNAQLEVDHHLGUAC"; //Secret key
     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    $vnp_Returnurl = "http://localhost/STUDYDOC/WebNC-php-TEST/vnpay_return.php";
+    $vnp_Returnurl = "http://localhost/STUDYDOC/WebNC-php-TEST/admin/checkout_vnpay/vnpay_return.php";
+
     $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
     //Config input format
     //Expire
@@ -120,8 +121,7 @@
                     <?php
                     if ($secureHash == $vnp_SecureHash) {
                         if ($_GET['vnp_ResponseCode'] == '00') {
-                            mysqli_query($conn,"UPDATE checkout SET status = '1' WHERE checkout_id = '{$_SESSION['id_thanhtoan']}';");
-                            echo "<span style='color:blue'>Thanh Toán Thành Công</span>";
+                            echo "<span style='color:Green; font-weight: bold;'>Thanh Toán Thành Công</span>";
                         } else {
                             echo "<span style='color:red'>Thanh Toán Không Thành Công</span>";
                         }
@@ -139,7 +139,7 @@
         <?php
         unset($_SESSION['cart']);
         ?>
-        <a href="index.php"><button style="margin-bottom: 30px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
+        <a href="../../order_info.php"><button class="btn btn-success mb-3">QUAY LẠI</button></a>
     </div>
 
 </body>

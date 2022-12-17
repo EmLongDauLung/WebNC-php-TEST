@@ -67,46 +67,8 @@ $conn = $dbConnection->getConnection();
         </form>
         <?php require '../../admin/product/productProcess.php'; ?>
     </div>
-    <div class="w-100">
-        <div class="noidung m-5">
-            <table class="table table-striped table-bordered border border-2">
-                <tr>
-                    <td>Mã sản phẩm</td>
-                    <td>Tên sản phẩm</td>
-                    <td>Mô tả</td>
-                    <td>Số lượng</td>
-                    <td>Giá</td>
-                    <td>Giá giảm</td>
-                    <td>Đánh giá</td>
-                    <td>Loại</td>
-                    <td>Nhà sản xuất</td>
-                    <td>Ảnh</td>
-                    <td>Edit</td>
-                    <td>Delete</td>
-                </tr>
-                <?php
-                $sql = "SELECT * FROM products";
-                $result = mysqli_query($conn, $sql);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<tr>";
-                    echo "<td><p>" . $row['product_id'] . "</p></td>";
-                    echo "<td><p>" . $row['title'] . "</p></td>";
-                    echo "<td><p>" . $row['content'] . "</p></td>";
-                    echo "<td><p>" . $row['quantity'] . "</p></td>";
-                    echo "<td><p>" . $row['oldprice'] . "</p></td>";
-                    echo "<td><p>" . $row['price'] . "</p></td>";
-                    echo "<td><p>" . $row['star'] . "</p></td>";
-                    echo "<td><p>" . $row['type'] . "</p></td>";
-                    echo "<td><p>" . $row['trademark_id'] . "</p></td>";
-                    echo "<td><img src='../../assets/img/" . $row['image'] . "' height=100></td>";
-                    echo '<td><a href="../../admin/product/productEdit.php?id=' . $row['product_id'] . '">Edit</a></td>  <td><a href="product_delete.php?id=' . $row['product_id'] . '">Delete</a></td>';
-                    echo "</tr>";
-                }
-                ?>
-            </table>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -199,7 +199,7 @@ session_start();
                         <a class="link_decor_remover hover-link" href="./posts.php">Blog</a>
                     </li>
                     <li class="menu_right-item">
-                        <a class="link_decor_remover hover-link" href="./addProducts.php">Cửa hàng</a>
+                        <a class="link_decor_remover hover-link" href="./admin/product/addProducts.php">Cửa hàng</a>
                     </li>
                     <li class="menu_right-item">
                         <a class="link_decor_remover hover-link" href="order_info.php">Đơn hàng</a>
