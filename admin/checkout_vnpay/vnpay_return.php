@@ -26,7 +26,7 @@
 <body>
     <?php
     session_start();
-    include("dbConnection.php");
+    include("../../dbConnection.php");
     $dbConnection = new dbConnection();
     $conn = $dbConnection->getConnection();
     date_default_timezone_set('Asia/Ho_Chi_Minh');
