@@ -1,5 +1,13 @@
 <?php
-session_start();
+    session_start();
+
+    include("dbConnection.php");
+    $dbConnection = new dbConnection();
+    $conn = $dbConnection->getConnection();
+    $id = -1;
+    if (isset($_GET["id"])) {
+        $id = intval($_GET['id']);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
