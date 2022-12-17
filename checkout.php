@@ -80,13 +80,23 @@ session_start();
                     <label style="font-size: 18px;font-family: 'Times New Roman', Times, serif;">TỔNG TIỀN</label>
                     <div>
                         <?php
-                        echo $_SESSION['total_money']
+                        include("dbConnection.php");
+                        $dbConnection = new dbConnection();
+                        $conn = $dbConnection->getConnection();
+                        $id = -1;
+                        if (isset($_GET["id"])) {
+                            $id = intval($_GET['id']);
+                        }
+                        $sql = "SELECT total_money FROM checkout WHERE checkout_id = $id";
+                        $result = mysqli_query($conn,$sql);
+                        $row = mysqli_fetch_array($result);
+                        echo $row['total_money'];
                         ?>
                     </div>
                 </div>
                 <button class="btn btn-success" name="redirect" id="redirect" style="margin-bottom: 10px;">THANH TOÁN</button>
             </form>
-            <a href="cart.php"><button style="margin-top: -86px;margin-left: 145px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
+            <a href="order_info.php"><button style="margin-top: -86px;margin-left: 145px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
         </div>
     </div>
 

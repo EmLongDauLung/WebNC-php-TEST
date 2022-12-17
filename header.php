@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/posts.css">
     <link rel="stylesheet" href="./assets/css/cart.css">
     <link rel="stylesheet" href="./assets/css/order_detail.css">
+    <link rel="stylesheet" href="./assets/css/profile.css">
     <script src="./assets/ckeditor/ckeditor.js"></script>
     <!-- <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap-grid.css"> -->
     <link rel="stylesheet" href="./assets/bootstrap-5.2.2-dist/css/bootstrap.css">
@@ -78,7 +82,6 @@
                 <div class="login__cart__logout">
                     <div class="login__cart__logout-item login">
                         <?php
-                        session_start();
                         include("dbConnection.php");
                         $dbConnection = new dbConnection();
                         $conn = $dbConnection->getConnection();
@@ -199,7 +202,7 @@
                         <a class="link_decor_remover hover-link" href="./addProducts.php">Cửa hàng</a>
                     </li>
                     <li class="menu_right-item">
-                        <a class="link_decor_remover hover-link" href="#">Đơn hàng</a>
+                        <a class="link_decor_remover hover-link" href="order_info.php">Đơn hàng</a>
                     </li>
                     <li class="menu_right-item">
                         <a class="link_decor_remover hover-link" href="#">Trang cá nhân</a>
