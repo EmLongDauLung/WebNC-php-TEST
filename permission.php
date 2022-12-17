@@ -1,5 +1,5 @@
 <?php
-	if (isset($_SESSION['user_id']) == false) {
+	if (isset($_SESSION['user_id']) == false && isset($_SESSION['admin_id']) == false) {
 		// Nếu người dùng chưa đăng nhập thì chuyển hướng website sang trang đăng nhập
 		echo '<script language="javascript">alert("Bạn chưa đăng nhập"); window.location="login.php";</script>';
 		// header('Location: login.php');
