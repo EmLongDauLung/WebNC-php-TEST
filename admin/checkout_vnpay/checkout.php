@@ -71,7 +71,7 @@ session_start();
                     <label class="me-3">TỔNG TIỀN</label>
                     <div>
                         <?php
-                        include("dbConnection.php");
+                        include("../../dbConnection.php");
                         $dbConnection = new dbConnection();
                         $conn = $dbConnection->getConnection();
                         $id = -1;
@@ -87,7 +87,7 @@ session_start();
                 </div>
                 <button class="btn btn-success" name="redirect" id="redirect" style="margin-bottom: 10px;">THANH TOÁN</button>
             </form>
-            <a href="order_info.php"><button style="margin-top: -86px;margin-left: 145px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
+            <a href="../../order_info.php"><button style="margin-top: -86px;margin-left: 145px;" class="btn btn-secondary">QUAY LẠI</button></a>
         </div>
     </div>
 

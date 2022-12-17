@@ -147,7 +147,7 @@ if (!empty($_SESSION['cart'])) {
                         echo '<script language="javascript">alert("Chưa có sản phẩm nào trong giỏ hàng");</script>';
                     } else {
                         $_SESSION['total_money'] = $total;
-                        echo '<script language="javascript">window.location.replace("admin/checkout_vnpay/checkout.php");</script>';
+                        echo '<script language="javascript">window.location.replace("checkout.php");</script>';
                     }
                 }
                 ?> -->

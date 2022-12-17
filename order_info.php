@@ -39,7 +39,7 @@
                                 <a href='order_detail_products.php?id={$row['checkout_id']}' style=' text-decoration: none;color: #397224;'>Xem</a>
                             </td>";
                     echo "  <td class='text-center'>
-                                <a href='./checkout.php?id={$row['checkout_id']}' style='text-decoration: none; color: #397224;'>Thanh toán</a>
+                                <a href='admin/checkout_vnpay/checkout.php?id={$row['checkout_id']}' style='text-decoration: none; color: #397224;'>Thanh toán</a>
                             </td>";
                     echo "</tr>";
                 }

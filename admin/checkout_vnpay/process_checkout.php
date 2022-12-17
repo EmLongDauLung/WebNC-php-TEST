@@ -12,7 +12,7 @@ $vnp_TmnCode = "WAVHY2N6"; //Website ID in VNPAY System
 $vnp_HashSecret = "RDDUIQQZHQNCVPGLVWNAQLEVDHHLGUAC"; //Secret key
 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
 //
-$vnp_Returnurl = "http://localhost/STUDYDOC/WebNC-php-TEST/vnpay_return.php";
+$vnp_Returnurl = "http://localhost/STUDYDOC/WebNC-php-TEST/admin/checkout_vnpay/vnpay_return.php";
 //
 $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 //Config input format
