@@ -38,9 +38,17 @@
                     echo "  <td class='text-center'>
                                 <a href='order_detail_products.php?id={$row['checkout_id']}' style=' text-decoration: none;color: #397224;'>Xem</a>
                             </td>";
-                    echo "  <td class='text-center'>
-                                <a href='./checkout.php?id={$row['checkout_id']}' style='text-decoration: none; color: #397224;'>Thanh toán</a>
-                            </td>";
+                    if($row['status'] == 0){
+                        echo "  <td class='text-center'>
+                            <a href='./checkout.php?id={$row['checkout_id']}' style='text-decoration: none; color: #397224;'>Thanh toán</a>
+                        </td>";
+                        $_SESSION['id_thanhtoan'] = $row['checkout_id'];
+                    }
+                    else{
+                        echo "  <td class='text-center'>
+                                    Đã thanh toán
+                                </td>";
+                    }
                     echo "</tr>";
                 }
                 ?>

@@ -34,7 +34,7 @@ $result = mysqli_query($conn, $sql1);
 ?>
 <?php foreach ($result as $data) : ?>
     <div class="products products_recommend col mx-4 mb-4">
-        <a href='order_detail.php?id={<?php echo $data['product_id'] ?>}'>
+        <a href='order_detail.php?id=<?php echo $data['product_id'] ?>'>
             <img src='./assets/img/<?php echo $data['image'] ?>' alt='' class='img_products'>
         </a>
         <div class='describe_products'>
