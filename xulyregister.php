@@ -4,7 +4,6 @@ header('Content-Type: text/html; charset=utf-8');
 include("dbConnection.php");
 $dbConnection = new dbConnection();
 $conn = $dbConnection->getConnection();
-// $conn = mysqli_connect('127.0.0.1:3306', 'root', 'eldl', 'botstore_test') or die ('Lỗi kết nối'); mysqli_set_charset($conn, "utf8");
 
 // Dùng isset để kiểm tra Form
 if (isset($_POST['dangky'])) {

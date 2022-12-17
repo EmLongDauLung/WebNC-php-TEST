@@ -27,19 +27,18 @@
                 </div>
             </div>
             <div class="body_bot-deal-child">
-                <?php 
-                    // include("dbConnection.php");
-                    // $dbConnection = new dbConnection();
-                    // $conn = $dbConnection->getConnection();
+                <?php
+                // include("dbConnection.php");
+                // $dbConnection = new dbConnection();
+                // $conn = $dbConnection->getConnection();
 
-                    $sql = "SELECT * FROM products WHERE type = 'ưu đãi' order by product_id desc limit 4;";
-                    $query = mysqli_query($conn,$sql);
-                    if(mysqli_num_rows($query) == 0){
-                        echo"Hiện chúng tôi không có ưu đãi cho sản phẩm nào :>>";
-                    }
-                    else{
-                        while($data = mysqli_fetch_assoc($query)){
-                            echo "
+                $sql = "SELECT * FROM products WHERE type = 'ưu đãi' order by product_id desc limit 4;";
+                $query = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($query) == 0) {
+                    echo "Hiện chúng tôi không có ưu đãi cho sản phẩm nào :>>";
+                } else {
+                    while ($data = mysqli_fetch_assoc($query)) {
+                        echo "
                                 <div class='products'>
                                     <a href='order_detail.php?id={$data['product_id']}'>
                                         <img src='./assets/img/{$data['image']}' alt='' class='img_products'>
@@ -60,11 +59,11 @@
                                     </div>
                                 </div>
                             ";
-                        }
                     }
+                }
                 ?>
-                </div>
             </div>
+        </div>
         <!-- END DEAL -->
         <!-- TOP sản phẩm -->
         <div class="body_top-ratings-brands">
@@ -81,16 +80,15 @@
                     </div>
                 </div>
                 <div class="body_bot-ratings">
-                    <?php 
-                        $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by product_id desc limit 4;";
-                        
-                        $query = mysqli_query($conn,$sql);
-                        if(mysqli_num_rows($query) == 0){
-                            echo"Hiện chúng tôi không có sản phẩm nào";
-                        }
-                        else{
-                            while($data = mysqli_fetch_assoc($query)){
-                                echo "
+                    <?php
+                    $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by product_id desc limit 4;";
+
+                    $query = mysqli_query($conn, $sql);
+                    if (mysqli_num_rows($query) == 0) {
+                        echo "Hiện chúng tôi không có sản phẩm nào";
+                    } else {
+                        while ($data = mysqli_fetch_assoc($query)) {
+                            echo "
                                 <div class='body_bot-ratings-item'>
                                     <a href='#'>
                                         <img src='./assets/img/{$data['image']}' class='img_ratings-item'>
@@ -102,8 +100,8 @@
                                     </div>
                                 </div>
                                 ";
-                            }
                         }
+                    }
                     ?>
                 </div>
             </div>
@@ -120,22 +118,21 @@
                     </div>
                 </div>
                 <div class="body_bot-brands-info">
-                    <?php 
-                        $sql = "SELECT * FROM trademark order by trademark_id asc limit 2;";
-                        $query = mysqli_query($conn,$sql);
-                        if(mysqli_num_rows($query) == 0){
-                            echo"Hiện chúng tôi đã phá sản và không còn nhà tài trợ";
-                        }
-                        else{
-                            while($data = mysqli_fetch_assoc($query)){
-                                echo "
+                    <?php
+                    $sql = "SELECT * FROM trademark order by trademark_id asc limit 2;";
+                    $query = mysqli_query($conn, $sql);
+                    if (mysqli_num_rows($query) == 0) {
+                        echo "Hiện chúng tôi đã phá sản và không còn nhà tài trợ";
+                    } else {
+                        while ($data = mysqli_fetch_assoc($query)) {
+                            echo "
                                     <div class='brands-info_item'>
                                         <img src='./assets/img/{$data['image']}' class='img_featurebrands'>
                                         <span>{$data['title']}</span>
                                     </div>
                                 ";
-                            }
                         }
+                    }
                     ?>
                 </div>
             </div>
@@ -149,23 +146,22 @@
                     Sản phẩm mới
                 </div>
                 <div class="body_top-title-right">
-                    <a href="#" class="body_top-title-right-item">Xem tất cả
+                    <a href="AllProduct.php" class="body_top-title-right-item">Xem tất cả
                         <i class="fa-solid fa-caret-right icon_arrow-viewall"></i>
                     </a>
                 </div>
             </div>
             <div class="body_bot-arrivals-info">
-                <?php 
-                    $sql = "SELECT * FROM products WHERE type = 'sản phẩm mới' order by product_id desc limit 6;";
-                    $query = mysqli_query($conn,$sql);
-                    if(mysqli_num_rows($query) == 0){
-                        echo"Hiện chúng tôi không có sản phẩm mới";
-                    }
-                    else{
-                        while($data = mysqli_fetch_assoc($query)){
-                            echo "
+                <?php
+                $sql = "SELECT * FROM products order by product_id desc limit 6;";
+                $query = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($query) == 0) {
+                    echo "Hiện chúng tôi không có sản phẩm mới";
+                } else {
+                    while ($data = mysqli_fetch_assoc($query)) {
+                        echo "
                                 <div class='arrivals-info_item'>
-                                    <a href='#'>
+                                    <a href='order_detail.php?id={$data['product_id']}'>
                                         <img src='./assets/img/{$data['image']}' class='img_arrivals-item'>
                                     </a>
                                     <div class='arrivals-info_text'>
@@ -174,8 +170,8 @@
                                     </div>
                                 </div>
                             ";
-                        }
                     }
+                }
                 ?>
                 <!-- <div class="arrivals-info_item">
                     <a href="#">
@@ -213,21 +209,20 @@
                 Đề xuất cho bạn
             </div>
             <div class="body_top-title-right">
-                <a href="#" class="body_top-title-right-item">Xem tất cả
+                <a href="AllProduct.php" class="body_top-title-right-item">Xem tất cả
                     <i class="fa-solid fa-caret-right icon_arrow-viewall"></i>
                 </a>
             </div>
         </div>
         <div class="body_bot-recommend">
-            <?php 
-                $sql = "SELECT * FROM products order by product_id desc limit 12";
-                $query = mysqli_query($conn,$sql);
-                if(mysqli_num_rows($query) == 0){
-                    echo"Không mua thì đề xuất làm gì. Tự giác bấm Ctrl + W đi";
-                }
-                else{
-                    while($data = mysqli_fetch_assoc($query)){
-                        echo "
+            <?php
+            $sql = "SELECT * FROM products order by product_id asc limit 8";
+            $query = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($query) == 0) {
+                echo "Không mua thì đề xuất làm gì. Tự giác bấm Ctrl + W đi";
+            } else {
+                while ($data = mysqli_fetch_assoc($query)) {
+                    echo "
                             <div class='products products_recommend'>
                                 <a href='order_detail.php?id={$data['product_id']}'>
                                     <img src='./assets/img/{$data['image']}' alt='' class='img_products'>
@@ -248,8 +243,8 @@
                                 </div>
                             </div>
                         ";
-                    }
                 }
+            }
             ?>
         </div>
     </div>
