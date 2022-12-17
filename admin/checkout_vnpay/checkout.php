@@ -68,33 +68,26 @@ session_start();
                     </select>
                 </div>
                 <div class="form-group d-flex flex-row mb-3 fs-5 text">
-                    <label class="me-3">TỔNG TIỀN:</label>
-                    <div class="d-flex flex-row">
-                        <p class="m-0">
-                            <?php
-                            echo $_SESSION['total_money']
-                            ?>
-                        </p>
-                        <p class="m-0">
-                            $
-                        </p>
-                    </div>
-                    <!-- <div class="d-flex flex-row">
-                        <span class="mx-2"> ==> </span>
+                    <label class="me-3">TỔNG TIỀN</label>
+                    <div>
                         <?php
-                        $VND =  $_SESSION['total_money'] * 24000
+                        include("dbConnection.php");
+                        $dbConnection = new dbConnection();
+                        $conn = $dbConnection->getConnection();
+                        $id = -1;
+                        if (isset($_GET["id"])) {
+                            $id = intval($_GET['id']);
+                        }
+                        $sql = "SELECT total_money FROM checkout WHERE checkout_id = $id";
+                        $result = mysqli_query($conn, $sql);
+                        $row = mysqli_fetch_array($result);
+                        echo $row['total_money'];
                         ?>
-                        <span class="m-0">
-                            <?php
-                            echo $VND
-                            ?>
-                            VNĐ
-                        </span>
-                    </div> -->
+                    </div>
                 </div>
                 <button class="btn btn-success" name="redirect" id="redirect" style="margin-bottom: 10px;">THANH TOÁN</button>
             </form>
-            <a href="cart.php"><button style="margin-top: -86px;margin-left: 145px;" class="btn btn-secondary">QUAY LẠI</button></a>
+            <a href="order_info.php"><button style="margin-top: -86px;margin-left: 145px;background-color: #00ab90;" class="btn btn-success">QUAY LẠI</button></a>
         </div>
     </div>
 

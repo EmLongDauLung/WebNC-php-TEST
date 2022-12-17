@@ -137,8 +137,8 @@ if (!empty($_SESSION['cart'])) {
             <div class="text-center">
                 <input type="submit" name="update__totalmoney" value="Cập nhật" class="btn__submit__money-order">
                 <input type="submit" name="btn__order" value="Đặt hàng" class="btn__submit__money-order">
-                <form action="cart.php" method="post">
-                    <!-- <input type="hidden" name="send"> -->
+                <!-- <form action="cart.php" method="post">
+                     <input type="hidden" name="send"> 
                     <input type="submit" name="vnpay" class="btn__submit__money-order" value="Thanh toan VNPAY">
                 </form>
                 <?php
@@ -150,7 +150,7 @@ if (!empty($_SESSION['cart'])) {
                         echo '<script language="javascript">window.location.replace("admin/checkout_vnpay/checkout.php");</script>';
                     }
                 }
-                ?>
+                ?> -->
             </div>
         </form>
     </div>

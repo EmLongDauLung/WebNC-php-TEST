@@ -1,42 +1,16 @@
 <?php include("./header.php") ?>
-<style>
-    .container__body {
-        width: 100%;
-        height: auto;
-    }
-
-    .container__profile {
-        width: 80%;
-        height: auto;
-        margin: 50px auto;
-    }
-
-    .container__profile__title {
-        width: fit-content;
-        height: auto;
-        padding: 4px 15px;
-        margin: 0 0 18px 0;
-        background-color: #397224;
-        color: white;
-        border-radius: 12px;
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-    .option__posts {
-        color: #72af5c;
-        margin: 0 4px;
-    }
-
-    .option__posts:hover {
-        color: #397224;
-    }
-</style>
 
 <body class="container__body">
     <div class="container__profile">
-        <div class="container__profile__title">Bài viết của bạn</div>
-        <table class='table table-hover'>
+        <div class="container__title">
+            <div class="container__title__item">
+                <a href="" class="container__profile__title">Bài viết của bạn</a>
+            </div>
+            <div class="container__title__item">
+                <a href="./order_info.php" class="container__profile__title">Giỏ hàng của bạn</a>
+            </div>
+        </div>
+        <table class='table table-hover table__profile'>
             <thead>
                 <tr>
                     <th scope='col'>ID</th>
