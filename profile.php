@@ -41,6 +41,7 @@
                 <tr>
                     <th scope='col'>ID</th>
                     <th scope='col'>Title</th>
+                    <th scope='col'>Image</th>
                     <th scope='col'>CreateDate</th>
                     <th scope='col'>Content</th>
                     <th scope='col'>Option</th>
@@ -55,6 +56,7 @@
                     <tr>
                         <th scope='row'>{$data['posts_id']}</th>
                         <td>{$data['title']}</td>
+                        <td><img src='./assets/img/{$data['image']}' alt=''style='width: 50px; height:auto'></td>
                         <td>{$data['createdate']}</td>
                         <td>" . substr($data['content'], 0, 100) . "</td>
                         <td>

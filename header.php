@@ -82,7 +82,7 @@
                         include("dbConnection.php");
                         $dbConnection = new dbConnection();
                         $conn = $dbConnection->getConnection();
-                        if ($_SESSION['user_id'] == NULL) {
+                        if ($_SESSION['user_id'] == NULL and $_SESSION['admin_id'] == NULL) {
                             echo "
                                     <a href='login.php' class='login_cart-item-link'>
                                         <div class='login-cart_item'>
@@ -110,7 +110,7 @@
                         </a>
                     </div>
                     <?php
-                    if ($_SESSION['user_id'] != NULL) {
+                    if ($_SESSION['user_id'] != NULL or $_SESSION['admin_id'] != NULL) {
                         echo "
                                 <div class='login__cart__logout-item logout'>
                                     <a href='logout.php' class='login_cart-item-link'>

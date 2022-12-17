@@ -46,7 +46,7 @@ if (isset($_POST['photoUp'])) {
 	if ($file_size > 2097152) {
 		$errors[] = 'Kích thước file không được lớn hơn 2MB';
 	}
-	$target = "assets/photo/" . basename($_FILES["imageUpload"]["name"]);
+	$target = "./assets/img/".basename($image);
 	$sql = "INSERT INTO posts( title, content, image,user_id, is_public, createdate, updatedate ) VALUES ( '$title', '$content', '$image', '$user_id',  '$is_public' , now(), now())";
 	if (mysqli_query($conn, $sql) && move_uploaded_file($_FILES['imageUpload']['tmp_name'], $target) && empty($errors) == true) {
 		echo '<script language="javascript">alert("Đăng bài viết thành công!");</script>';
@@ -58,7 +58,7 @@ if (isset($_POST['photoUp'])) {
 
 <body>
 	<div class="posts">
-		<form method="POST">
+		<form method="POST" action="addposts-ck.php" enctype="multipart/form-data">
 			<table class="table table-bordered table-striped">
 				<tr>
 					<td colspan="2">
@@ -78,7 +78,7 @@ if (isset($_POST['photoUp'])) {
 					<td><input type="checkbox" id="is_public" name="is_public" value="1" checked> Public</td>
 				</tr>
 				<tr>
-					<td>Ảnh (only png or jpeg)</td>
+					<td>Ảnh (png or jpeg)</td>
 					<td>
 						<input type="hidden" name="size" value="1000000">
 						<input type="file" name="imageUpload">

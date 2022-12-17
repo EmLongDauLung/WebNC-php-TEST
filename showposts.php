@@ -21,9 +21,11 @@
     <div>
         <?php 
             while ( $data = mysqli_fetch_array($query) ) {
-                echo"<h3>{$data['title']}</h3> </br>
+                echo "
+                <h3>{$data['title']}</h3> </br>
                 <i> Ngày tạo: {$data['createdate']}</i>
                 <p>{$data['content']}</p>
+                <img src='./assets/img/{$data['image']}' alt=''>
                 ";
             }
         ?>

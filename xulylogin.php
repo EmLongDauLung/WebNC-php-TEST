@@ -76,7 +76,7 @@ if (isset($_POST["admin_login"])) {
 		} else {
 			// Lấy ra thông tin người dùng và lưu vào session
 			while ($data = mysqli_fetch_array($query)) {
-				$_SESSION["user_id"] = $data["admin_id"];
+				$_SESSION["admin_id"] = $data["admin_id"];
 				$_SESSION['username'] = $data["username"];
 				$_SESSION["email"] = $data["email"];
 				$_SESSION["fullname"] = $data["fullname"];
@@ -90,12 +90,11 @@ if (isset($_POST["admin_login"])) {
 				$is_block = $_SESSION['is_block'];
 				// Kiểm tra quyền của người đó có phải là admin hay không
 				if ($permission == '1' && $is_block == '0') {
-					header('Location: dashboard-fix.php');
+					header('Location: ./admin/user/dashboard-fix.php');
 				} else {
 					echo '<script language="javascript">alert("Tài khoản admin này đã bị vô hiệu hóa!"); window.location="adlogin.php";</script>';
 				}
 			}
-			// ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
 		}
 	}
 }
